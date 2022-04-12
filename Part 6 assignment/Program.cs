@@ -6,14 +6,13 @@ namespace Part_6_assignment
     {
         static void Main(string[] args)
         {
-            //Prompter(); 
-            //PercentPassing();
-            //RandomNumbers();
-            Odd Sum
-            int num;
-            Console.WriteLine("Please enter a number");
-            (!Int32.TryParse(Console.ReadLine(), out num))
-            
+            //Cameron
+            Prompter(); 
+            PercentPassing();
+            RandomNumbers();
+            OddSum();
+
+
 
 
         }
@@ -93,6 +92,24 @@ namespace Part_6_assignment
                 Console.WriteLine($"{generator.Next(num1, num2 + 1)}");
                 i = i + 1;
             } while (i != 25);
+        }
+        public static void OddSum ()
+        {
+            int num;
+            int solid = 0;
+            int change = 1;
+            do
+            {
+                Console.WriteLine("Please enter a number");
+                while (!Int32.TryParse(Console.ReadLine(), out num))
+                    Console.WriteLine("Invalid input");
+            } while (num <= 0);
+            do
+            {
+                solid = solid + change;
+                change = change + 2;
+            } while (change <= num);
+            Console.WriteLine($"the sum of all odd numbers is {solid}");
         }
     }
 }
