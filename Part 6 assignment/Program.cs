@@ -96,7 +96,7 @@ namespace Part_6_assignment
         public static void OddSum ()
         {
             int num;
-            int solid = 0;
+            int total = 0;
             int change = 1;
             do
             {
@@ -106,10 +106,10 @@ namespace Part_6_assignment
             } while (num <= 0);
             do
             {
-                solid = solid + change;
+                total = total + change;
                 change = change + 2;
             } while (change <= num);
-            Console.WriteLine($"the sum of all odd numbers is {solid}");
+            Console.WriteLine($"the sum of all odd numbers is {total}");
         }
     }
 }
